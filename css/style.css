@@ -24,11 +24,17 @@ body {
 }
 #top-row-title {
     font-size: 1.75em;
+    padding-left: 0em;
+}
+h1 {
+    all: inherit;
 }
 .top-row-item {
     padding-top: 0.75em;
 }
 .content {
+    font-family: 'Open Sans', 'Segoe UI', 'Helvetica', 'Arial' ,sans-serif;
+    font-size: 1.05em;
     padding: 2em;
     padding-top: 1.75em;
     padding-bottom: 0.5em;
