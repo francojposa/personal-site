@@ -51,4 +51,4 @@ func main() {
 * Verify your binary is runnable from everywhere: `% hello`
 
 ### Troubleshooting
-If you get `zsh: command not found: hello` when trying to run your installed binary, there is likely an issue with your path. `go install` places the binary in `$GOPATH/bin` so be sure that `$GOPATH/bin` is in your `PATH` as described in the Installation step.
+If you get `zsh: command not found: hello` when trying to run your installed binary, there is likely an issue with your path. The `% go install` command places the binary in `$GOPATH/bin` so be sure that `$GOPATH/bin` is in your `PATH` as described in the Installation step.
