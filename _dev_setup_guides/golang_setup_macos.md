@@ -9,7 +9,7 @@ order_number: 2
 
 `% brew install go`
 
-Add the following to your ~/.zshrc:
+Add the following to your `~/.zshrc`:
 ```
 # This is the default, but prefer explicit over implicit
 export GOPATH=$HOME/go
