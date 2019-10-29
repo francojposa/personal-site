@@ -11,9 +11,11 @@ order_number: 2
 
 Add the following to your ~/.zshrc:
 ```
-export GOPATH=$HOME/go  # This is the default, but prefer explicit over implicit
+# This is the default, but prefer explicit over implicit
+export GOPATH=$HOME/go
 
-export PATH=$PATH:$GOPATH/bin  # Make your binary executables available anywhere on the machine 
+# Make your binary executables available anywhere on the machine 
+export PATH=$PATH:$GOPATH/bin
 ```
 ## 2. Create your Workspace
 This does not have to be in your home folder, just make sure it matches what you put in GOPATH
