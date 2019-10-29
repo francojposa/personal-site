@@ -2,7 +2,4 @@ collections:
   dev_setup_guides:
     output: true
     permalink: /resources/development/:title
-    order:
-      - inital_dev_setup_macos.md
-      - golang_setup_macos.md
 

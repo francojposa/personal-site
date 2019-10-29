@@ -2,6 +2,7 @@
 layout: resource
 title: Homebrew, Zsh, and Sublime Text - MacOS Dev Setup
 slug: intial_dev_setup_macos
+order_number: 1
 ---
 ## The Very Basics
 This guide is meant to walk through the most basic components of a dev environment setup on MacOs Catalina - the steps you would perform before writing your first lines of code on a new or factory-reset machine.

@@ -2,6 +2,7 @@
 layout: resource
 title: Golang - MacOS Dev Setup
 slug: golang_setup_macos
+order_number: 2
 ---
 
 ## 1. Installation

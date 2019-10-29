@@ -8,7 +8,8 @@ permalink: /resources
 
 <h2>Development Setup & Configuration</h2>
 <ul>
-    {% for dev_setup_guide in site.dev_setup_guides %}
+    {% assign ordered_dev_setup_guides = site.dev_setup_guides | sort:"order_number" %}
+    {% for dev_setup_guide in ordered_dev_setup_guides %}
     <li>
         <p><a href="{{ dev_setup_guide.url }}">{{ dev_setup_guide.title }}</a></p>
     </li>
