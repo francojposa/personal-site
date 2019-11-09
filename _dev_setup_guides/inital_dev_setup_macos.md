@@ -35,9 +35,30 @@ The most basic use of your `.zshrc` and similar dotfiles is to set environment v
 
 To start, we are only going to have our `.zshrc` to do one thing: `echo $PATH`. As the system `PATH` is so crucial to command-line tooling, I prefer to be start every terminal session with a printout of the current `PATH`.
 
-### Option 1: Command Line
+**Option 1: Command Line**
 ```
 % echo "echo \$PATH" > ~/.zshrc
 ```
 
 Note that the the `$` character needs to be escaped with a backslash so the actual string `echo $PATH` ends up in your dotfile, rather than the string `echo [whatever your PATH was when you ran this command]` which would not be particularly helpful.
+
+**Option 2: A text editor**
+
+Assuming you do not already have your preferred text editor installed, you can use the TextEdit app that ships with MacOS as the default editor for text files. The `open` command will attempt to open a file with whichever app is the default for that file's type.
+```
+% touch ~/.zshrc
+% open ~/.zshrc
+```
+
+Add the line `echo $PATH` to the file and save.
+
+**Test it out**
+
+The `.zshrc` will be invoked when you open a new terminal session in a new Terminal tab (`Cmd + T`), a new window (`Cmd + N`), or by running the file using the `source` command.
+
+You should see the contents of your `PATH` printed out. Compare the output to directly invoking `echo $PATH` from your terminal.
+```
+% source ~/.zshrc
+/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin
+% [carry on doing your thing]
+```
