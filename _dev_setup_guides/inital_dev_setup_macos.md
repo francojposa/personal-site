@@ -21,7 +21,7 @@ We will leave configuration for specific programming languages and toolchains fo
 The following assumes you are using the MacOS built-in Terminal.app
 
 ### Setting up Terminal.app to use zsh
-1. Open Terminal.app
+1. Open the Terminal application
 2. Open the Preferences pane using `Cmd +  ,` or by navigating to Terminal > Preferences in the menu bar
 3. In the General tab, note that "Default login shell" is selected. On MacOS Catalina, the default shell has been updated to `/bin/zsh`. On previous MacOS versions, you can enter `/bin/zsh` in the "Command (complete path)" option to switch from the default (`/bin/bash`) to `zsh`
 4. Use the Profiles tab to set any font, color, and cursor preferences you may have.
