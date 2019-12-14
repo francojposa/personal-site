@@ -59,6 +59,6 @@ The `.zshrc` will be invoked when you open a new terminal session in a new Termi
 You should see the contents of your `PATH` printed out. Compare the output to directly invoking `echo $PATH` from your terminal.
 ```
 % source ~/.zshrc
-/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 % [carry on doing your thing]
 ```
