@@ -1,6 +1,6 @@
 ---
 layout: resource
-title: Zsh, Homebrew, and Sublime Text - MacOS Dev Setup
+title: Zsh, Homebrew, Sublime Text, and VS Code - MacOS Dev Setup
 slug: intial_dev_setup_macos
 order_number: 1
 ---
@@ -60,5 +60,25 @@ You should see the contents of your `PATH` printed out. Compare the output to di
 ```
 % source ~/.zshrc
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+% echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 % [carry on doing your thing]
 ```
+
+## 2. Install Homebrew
+
+Homebrew is the unofficial official package manager for MacOS, and will be your first stop for installing and managing a wide variety of development tools. I always opt to `brew install` a package if possible rather than building from source or using a Mac disk image download. When it comes time to uninstall, upgrade, or manage dependencies, it's nice to be able to work with most of your dev tools using the same commands and working in the same directories.
+
+Without further ado, just follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The installer will download and install the XCode Developer Command Line Tools if you do not already have the most up-to-date versions - this process can take quite awhile.
+
+## 3. Install Sublime Text & Visual Studio Code
+
+Unless you're a hardcore vim user, a text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts, text files, and JSON blobs due to its quick startup and snappy feel, and VS Code for more involved development work where the VSCode plugins and tooling really shine.
+
+### Install Sublime Text editor and command line launcher
+
+```
+brew cask install sublime-text
+```
+
+The brew install sets up the `subl` launcher command for you, so go ahead and try it out: `subl ~/.zshrc`. Your zsh config will now be much easier to work with.
