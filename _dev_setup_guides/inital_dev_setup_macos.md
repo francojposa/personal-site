@@ -82,3 +82,12 @@ brew cask install sublime-text
 ```
 
 The brew install sets up the `subl` launcher command for you, so go ahead and try it out: `subl ~/.zshrc`. Your zsh config will now be much easier to work with.
+
+### Install Visual Studio Code editor & command line launcher
+
+```
+brew cask install visual-studio-code
+```
+
+Finally, test out  the VS Code launcher out as well: `code ~/.zshrc`.
+
