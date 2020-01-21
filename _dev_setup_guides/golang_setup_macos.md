@@ -2,7 +2,7 @@
 layout: resource
 title: Golang - MacOS Dev Setup
 slug: golang_setup_macos
-description: "Golang development environment setup for MacOS using Homebrew"
+description: "Golang development environment setup for MacOS"
 order_number: 2
 ---
 
