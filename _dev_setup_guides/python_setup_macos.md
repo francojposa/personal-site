@@ -33,17 +33,12 @@ Do not brew install python3, do not mess with Python 2 and Python 3 versions tha
 
 ```
 % eval "$(pyenv init -)"
-```
-
-The `~/.pyenv/` directory has now been created and added to the beginning of your `PATH`:
-```
 % echo $PATH
 /Users/franco/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
+As long as `~/.pyenv/shims` sits at the beginning of your `PATH`, Python versions installed by Pyenv will take precedence over any others.
 
-As long as `~/.pyenv/shims` sits before `/usr/local/bin/` and `/usr/bin` in the `PATH`, invoking `python`, `pip`, or other related tools will all be managed by pyenv.
-
-Add this to your `~/.zshrc` to ensure pyenv is initialized on each new shell session:
+Add this to your `~/.zshrc` to ensure Pyenv is initialized on each new shell session:
 ```
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -52,15 +47,6 @@ fi
 Check out this [Stack Overflow post](https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script) if you want to get in the weeds of what those dense-looking shell commands mean.
 
 ### Install Your Python Versions
-
-If we test Pyenv out as-as, we don't have much.
-```
-% pyenv versions
-* system (set by /Users/franco/.pyenv/version)
-% which python
-/usr/bin/python
-```
-We only have access to the Mac OS-included python 2, which we generally want to avoid. Furthermore, the file Pyenv is looking for, `~/.pyenv/version`, doesn't even exist which is why Pyenv is sticking with default python install.
 
 Here's where the magic starts. Let's install some versions of Python we want to work with:
 
@@ -73,7 +59,7 @@ Here's where the magic starts. Let's install some versions of Python we want to 
   3.8.0
 ```
 
-Now we have 3 versions available. Switch the version for this shell session and start it up to see the effect:
+Now we have three versions available. Switch the version for this shell session and start it up to see the effect:
 
 ```
 % pyenv shell 3.6.8
