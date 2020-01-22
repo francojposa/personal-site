@@ -18,7 +18,7 @@ Hopefully by writing up this guide I can save someone else the hours I have lost
 
 ## 1. Do Not Install Anything! (Yet)
 
-Do not brew install python3, do not mess with Python 2 and Python 3 versions that ship with MacOS, do not pass go, do not collect $200 - I promise you this way will be easier.
+Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS, do not pass go, do not collect $200 - I promise you this way will be easier.
 
 ## 2. Install and Set Up Pyenv
 
