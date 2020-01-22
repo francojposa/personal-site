@@ -70,10 +70,10 @@ Python 3.6.8 (default, Jan 21 2020, 21:10:14)
 ```
 
 ### Set Your Global Default Python Version
-Our final Pyenv configuration step! To make sure you always start a shell session with your preferred default, add this line to your `~/.zshrc`:
+Our final Pyenv configuration step! To make sure you always start a shell session with your preferred default Python version, add this line to your `~/.zshrc`:
 
 ```
-export PYENV_VERSION=3.8.0  # Or whichever version you prefer.
+export PYENV_VERSION=3.8.0
 ```
 
 And see the effects on your next shell session:
