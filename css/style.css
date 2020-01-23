@@ -78,7 +78,7 @@ div > .highlighter-rouge {
 .content {
     font-family: 'Georgia', 'Open Sans', 'Segoe UI', 'Helvetica', 'Arial' ,sans-serif;
     font-size: 1.05rem;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem;
 }
 .content a {
     text-decoration: underline;
