@@ -1,6 +1,6 @@
 ---
 layout: resource
-title: Zsh, Homebrew, Sublime Text, and VS Code - MacOS Dev Setup
+title: "Initial Dev Setup: Zsh, Homebrew, Sublime Text, and VS Code"
 slug: intial_dev_setup_macos
 description: "General development environment setup for MacOS: Zsh, Homebrew, Sublime Text, and VS Code"
 order_number: 1

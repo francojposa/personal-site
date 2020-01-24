@@ -1,6 +1,6 @@
 ---
 layout: resource
-title: Python, Pyenv, and Virtualenvwrapper - MacOS Dev Setup
+title: "Python Dev Setup Part 1: Pyenv + Virtualenvwrapper"
 slug: golang_setup_macos
 description: "The worry-free Python development environment setup for MacOS"
 order_number: 3
@@ -16,18 +16,19 @@ At long last, I have found a combination of tools that provide the control and s
 
 Hopefully by writing up this guide I can save someone else the hours I have lost to the Python ecosystem!
 
-## 1. Do Not Install Anything! (Yet)
+## 0. Do Not Install Anything! (Yet)
 
-Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS, do not pass go, do not collect $200 - I promise you this way will be easier.
+Save yourself the headaches.
 
-## 2. Install and Set Up Pyenv
+Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper alone. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibilty, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
 
-### Install Pyenv
+## 1. Install Pyenv-VirtualenvWrapper
+
 ```
-% brew install pyenv
+% brew install pyenv-virtualenvwrapper
 ```
 
-[Pyenv](https://github.com/pyenv/pyenv) handles most of our Python version magic for us by install various versions of Python in the home directory, and placing the directory at the front of our path.
+## 2. Set Up Pyenv
 
 ### Initialize Pyenv
 
@@ -70,7 +71,7 @@ Python 3.6.8 (default, Jan 21 2020, 21:10:14)
 ```
 
 ### Set Your Global Default Python Version
-Our final Pyenv configuration step! To make sure you always start a shell session with your preferred default Python version, add this line to your `~/.zshrc`:
+The final Pyenv configuration step! To make sure you always start a shell session with your preferred default Python version, add this line to your `~/.zshrc`:
 
 ```
 export PYENV_VERSION=3.8.0
@@ -82,4 +83,61 @@ And see the effects on your next shell session:
   system
   3.6.8
 * 3.8.0 (set by PYENV_VERSION environment variable)
+```
+
+## 3. Set up Virtualenvwrapper
+
+```
+% pyenv virtualenvwrapper
+```
+The first time it runs for a given Python version, it will need to pull down a few pip packages.
+
+In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session, so go ahead and add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
+
+The first time it runs for a given Python version, it will need to pull down a few pip packages.
+
+## Try it out!
+
+### Create a Virtual Environment With the Current Active Python Version
+Virtualenvwrapper's `mkvirtualenv` ("make virtual environment") command will use whichever Python version you have active, so it might help to check before usage:
+
+```
+% pyenv version
+3.8.0 (set by PYENV_VERSION environment variable)
+% mkvirtualenv temp380
+...
+(temp380) % which python
+/Users/franco/.virtualenvs/temp380/bin/python
+(temp380) %  python --version
+Python 3.8.0
+```
+
+### Create a Virtual Environment With a Different Python Version
+Virtualenvwrapper also offers a convenient way to point to which Python version a new virtualenv should be created with, without needing to mess with Pyenv directly or worry about the current enviroment:
+
+```
+(temp380) % pyenv version
+3.8.0 (set by PYENV_VERSION environment variable)
+(temp380) % mkvirtualenv temp368 --python ~/.pyenv/versions/3.6.8/bin/python
+...
+(temp368) % which python
+/Users/franco/.virtualenvs/temp368/bin/python
+(temp368) % python --version
+Python 3.6.8
+```
+
+### List all Virtual Environments
+Check on all the masterpieces you have created:
+```
+% lsvirtualenv -b  # -b for "brief", output takes up less space
+temp368
+temp380
+```
+
+### Clean Up
+And throw out any you no longer need:
+```
+%  rmvirtualenv temp368
+Removing temp368...
+%  # The [Python] world is your oyster...
 ```
