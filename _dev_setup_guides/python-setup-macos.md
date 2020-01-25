@@ -20,7 +20,7 @@ Hopefully by writing up this guide I can save someone else the hours I have lost
 
 Save yourself the headaches.
 
-Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper alone. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibilty, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
+Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper alone. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibility, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
 
 ## 1. Install Pyenv-VirtualenvWrapper
 
@@ -92,9 +92,7 @@ And see the effects on your next shell session:
 ```
 The first time it runs for a given Python version, it will need to pull down a few pip packages.
 
-In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session, so go ahead and add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
-
-The first time it runs for a given Python version, it will need to pull down a few pip packages.
+In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Go ahead and add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
 
 ## Try it out!
 
@@ -139,3 +137,7 @@ And throw out any you no longer need:
 ```
 %  rmvirtualenv temp368
 ```
+
+
+## Final Notes:
+ You may notice that in the Github repo that the [Pyenv-Virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper) plugin has not been updated since 2017. It still works perfectly, but it may be a good small project to fork and maintain so that it does not get lost to the sands of time.
