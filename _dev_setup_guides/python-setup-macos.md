@@ -1,7 +1,7 @@
 ---
 layout: resource
 title: "Python Dev Setup Part 1: Pyenv + Virtualenvwrapper"
-slug: golang_setup_macos
+slug: python-setup-macos
 description: "The worry-free Python development environment setup for MacOS"
 order_number: 3
 ---
@@ -113,7 +113,7 @@ Python 3.8.0
 ```
 
 ### Create a Virtual Environment With a Different Python Version
-Virtualenvwrapper also offers a convenient way to point to which Python version a new virtualenv should be created with, without needing to mess with Pyenv directly or worry about the current enviroment:
+Virtualenvwrapper can also point to which Python version a new virtualenv should be created with, without needing to mess with Pyenv directly or worry about the current environment:
 
 ```
 (temp380) % pyenv version

@@ -1,7 +1,7 @@
 ---
 layout: resource
 title: Golang Dev Setup
-slug: golang_setup_macos
+slug: golang-setup-macos
 description: "Golang development environment setup for MacOS"
 order_number: 2
 ---
