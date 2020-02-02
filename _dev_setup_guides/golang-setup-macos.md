@@ -1,8 +1,8 @@
 ---
 layout: resource
-title: Golang Dev Setup
-slug: golang-setup-macos
-description: "Golang development environment setup for MacOS"
+title: Golang Dev Setup & Hello World
+slug: golang-setup-hello-world-macos
+description: "Golang development environment setup & Hello World program for MacOS"
 order_number: 2
 ---
 
