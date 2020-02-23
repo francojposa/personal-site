@@ -7,13 +7,12 @@ h1 {
     font-family: 'Courier', serif;
     font-size: 2rem;
 }
-/* h2 {
-    font-size: 1.5rem;
+h2 {
+    font-size: 1.75rem;
 }
 h3 {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-} */
+    font-size: 1.5rem;
+}
 a, a:hover {
      color: inherit;
 } 
@@ -75,7 +74,7 @@ div > .highlighter-rouge {
 }
 
 .content {
-    font-family: 'Georgia', 'Open Sans', 'Segoe UI', 'Helvetica', 'Arial' ,sans-serif;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 1.05rem;
     padding: 1rem;
 }

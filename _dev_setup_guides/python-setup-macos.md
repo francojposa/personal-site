@@ -95,7 +95,7 @@ The first time it runs for a given Python version, it will need to pull down a f
 
 In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Go ahead and add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
 
-## Try it out!
+## 4. Try it out!
 
 ### Create a Virtual Environment With the Current Active Python Version
 Virtualenvwrapper's `mkvirtualenv` ("make virtual environment") command will use whichever Python version you have active, so it might help to check before usage:
