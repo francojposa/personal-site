@@ -1,10 +1,14 @@
 body {
-    line-height: 1.6rem;
     color: #000000;
     background-color:rgb(248,248,248);
 }
 h1 {
     font-family: 'Roboto Mono', 'Courier', serif;
+    /*https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/*/
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
 }
 
 a, a:hover {
