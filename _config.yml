@@ -3,3 +3,5 @@ collections:
     output: true
     permalink: /resources/development/:title
 
+plugins:
+  - jekyll-sitemap
