@@ -1,8 +1,8 @@
 ---
 layout: resource
-title: "Python Dev Setup Part 1: Pyenv + Virtualenvwrapper"
+title: "Python MacOS Dev Setup Part 1: Pyenv + Virtualenvwrapper"
 slug: python-setup-macos
-description: "The worry-free Python development environment setup for MacOS"
+description: "Worry-free Python development environment setup for MacOS"
 order_number: 3
 ---
 
@@ -21,7 +21,7 @@ Hopefully by writing up this guide I can save someone else the hours I have lost
 
 Save yourself the headaches.
 
-Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper alone. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibility, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
+Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper on its own. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibility, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
 
 ## 1. Install Pyenv-VirtualenvWrapper
 
@@ -46,11 +46,11 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 ```
-Check out this [Stack Overflow post](https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script) if you want to get in the weeds of what those dense-looking shell commands mean.
+Check out this [Stack Overflow post](https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script) if you want to get in the weeds of what those shell commands mean.
 
-### Install Your Python Versions
+### Install your Python versions
 
-Here's where the magic starts. Let's install some versions of Python we want to work with:
+Install some versions of Python we want to work with:
 
 ```
 % pyenv install 3.6.8
@@ -71,8 +71,8 @@ Python 3.6.8 (default, Jan 21 2020, 21:10:14)
 >>>
 ```
 
-### Set Your Global Default Python Version
-The final Pyenv configuration step! To make sure you always start a shell session with your preferred default Python version, add this line to your `~/.zshrc`:
+### Set your global default Python version
+To make sure you always start a shell session with your preferred default Python version, add this line to your `~/.zshrc`:
 
 ```
 export PYENV_VERSION=3.8.0
@@ -91,13 +91,13 @@ And see the effects on your next shell session:
 ```
 % pyenv virtualenvwrapper
 ```
-The first time it runs for a given Python version, it will need to pull down a few pip packages.
+The first time Virtualenvwrapper runs for each Python version, it will need to pull down a few pip packages.
 
-In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Go ahead and add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
+In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
 
-## 4. Try it out!
+## 4. Try it out
 
-### Create a Virtual Environment With the Current Active Python Version
+### Create a virtual environment with the current active Python version
 Virtualenvwrapper's `mkvirtualenv` ("make virtual environment") command will use whichever Python version you have active, so it might help to check before usage:
 
 ```
@@ -111,7 +111,7 @@ Virtualenvwrapper's `mkvirtualenv` ("make virtual environment") command will use
 Python 3.8.0
 ```
 
-### Create a Virtual Environment With a Different Python Version
+### Create a virtual environment with a different Python version
 Virtualenvwrapper can also point to which Python version a new virtualenv should be created with, without needing to mess with Pyenv directly or worry about the current environment:
 
 ```
@@ -125,8 +125,7 @@ Virtualenvwrapper can also point to which Python version a new virtualenv should
 Python 3.6.8
 ```
 
-### List all Virtual Environments
-Check on all the masterpieces you have created:
+### List all virtual environments
 ```
 % lsvirtualenv -b  # -b for "brief", output takes up less space
 temp368
@@ -134,7 +133,7 @@ temp380
 ```
 
 ### Clean Up
-And throw out any you no longer need:
+Wipe out any virtualenvs you no longer need:
 ```
 %  rmvirtualenv temp368
 ```

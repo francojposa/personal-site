@@ -1,12 +1,12 @@
 ---
 layout: resource
-title: Golang Dev Setup & Hello World
+title: Golang MacOS Dev Setup & Hello World
 slug: golang-setup-hello-world-macos
 description: "Golang development environment setup & Hello World program for MacOS"
 order_number: 2
 ---
 
-## 1. Installation
+## 1. Install Go with Homebrew
 
 `% brew install go`
 

@@ -1,6 +1,6 @@
 ---
 layout: resource
-title: "Initial Dev Setup: Zsh, Homebrew, Sublime Text, and VS Code"
+title: "Initial MacOS Dev Setup: Zsh, Homebrew, Sublime Text, and VS Code"
 slug: intial-dev-setup-macos
 description: "General development environment setup for MacOS: Zsh, Homebrew, Sublime Text, and VS Code"
 order_number: 1
@@ -11,7 +11,7 @@ This guide is meant to walk through the most basic components of a dev environme
 For my purposes and preferences, these basic components are:
 
 1. Configure zsh 
-2. Set terminal app preferences
+2. Set Terminal app preferences
 3. Install Homebrew package manager
 4. Install & configure Sublime text 3
 
@@ -70,7 +70,7 @@ You should see the contents of your `PATH` printed out. Compare the output to di
 
 Homebrew is the unofficial official package manager for MacOS, and will be your first stop for installing and managing a wide variety of development tools. I always opt to `brew install` a package if possible rather than building from source or using a Mac disk image download. When it comes time to uninstall, upgrade, or manage dependencies, it's nice to be able to work with most of your dev tools using the same commands and working in the same directories.
 
-Without further ado, just follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The installer will download and install the XCode Developer Command Line Tools if you do not already have the most up-to-date versions - this process can take quite awhile.
+Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The installer will download and install the XCode Developer Command Line Tools if you do not already have the most up-to-date versions - this process can take quite awhile.
 
 ## 3. Install Sublime Text & Visual Studio Code
 
