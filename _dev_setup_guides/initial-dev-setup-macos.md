@@ -15,7 +15,7 @@ For my purposes and preferences, these basic components are:
 3. Install Homebrew package manager
 4. Install & configure Sublime text 3
 
-We will leave configuration for specific programming languages and toolchains for subsequent guides
+Configuration for specific programming languages and toolchains will be left for subsequent guides.
 
 ## 1. Configure Zsh
 
@@ -74,7 +74,7 @@ Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The i
 
 ## 3. Install Sublime Text & Visual Studio Code
 
-Unless you're a hardcore vim user, a text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts, text files, and JSON blobs due to its quick startup and snappy feel, and VS Code for more involved development work where the VSCode plugins and tooling really shine.
+A general-purpose text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts & text files, due to its quick startup, and VS Code for more involved development work where the VSCode plugins and tooling offer more functionality.
 
 ### Install Sublime Text editor and command line launcher
 

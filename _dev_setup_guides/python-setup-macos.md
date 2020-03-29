@@ -8,9 +8,9 @@ order_number: 3
 
 ## Our choice of tools: Pyenv & VirtualenvWrapper
 
-Installing Python 3 & managing different versions and virtual environments on a Mac has been the subject of many online guides, and I have spent countless hours struggling with these guides and their recommended tools to create a local development environment that doesn't drive me insane.
+Installing multiple Python versions and managing Python virtual environments on a Mac is notoriously painful, and choosing the wrong tools for the job can lead to countless lost development hours. To make matters worse, many highly-ranked online guides suggest Python environment management strategies that are are outdated, inadequate, and will only lead to further frustration in your future.
 
-At long last, I have found a combination of tools that provide the control and simplicity I need:
+After trying nearly every available option, I have found a combination of tools that provide control and simplicity:
 
  * Pyenv:  for installing & switching between different python versions
  * Virtualenvwrapper:  for creating & managing virtual environments
@@ -23,7 +23,7 @@ Save yourself the headaches.
 
 Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper on its own. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibility, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
 
-## 1. Install Pyenv-VirtualenvWrapper
+## 1. Install Pyenv-Virtualenvwrapper
 
 ```
 % brew install pyenv-virtualenvwrapper
@@ -91,7 +91,7 @@ And see the effects on your next shell session:
 ```
 % pyenv virtualenvwrapper
 ```
-The first time Virtualenvwrapper runs for each Python version, it will need to pull down a few pip packages.
+The first time Virtualenvwrapper runs for each Python version, it will need to download a few pip packages.
 
 In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
 
@@ -140,4 +140,4 @@ Wipe out any virtualenvs you no longer need:
 
 
 ## Final Notes:
- You may notice that in the Github repo that the [Pyenv-Virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper) plugin has not been updated since 2017. It still works perfectly, but it may be a good small project to fork and maintain so that it does not get lost to the sands of time.
+ You may notice that in the Github repo that the [Pyenv-Virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper) plugin has not been updated since 2017. It still works perfectly, but it may be a good small project to fork and/or maintain so that it does not get lost to the sands of time.
