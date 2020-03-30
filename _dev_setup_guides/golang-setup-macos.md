@@ -27,13 +27,12 @@ This does not have to be in your home folder, just make sure it matches what you
 % mkdir ~/go/src
 ```
 
-## 3. Your First Program
+## 3. Hello Golang
 ```
 % mkdir ~/go/src/hello
 % cd ~/go/src/hello
 ```
-* Create & open `hello.go` in your preferred editor
-* paste the following in and save:
+Create `hello.go` in your preferred editor:
 
 ```
 package main

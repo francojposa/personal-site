@@ -6,7 +6,7 @@ description: "Worry-free Python development environment setup for MacOS"
 order_number: 3
 ---
 
-## Our choice of tools: Pyenv & VirtualenvWrapper
+## Our Choice of Tools: Pyenv & VirtualenvWrapper
 
 Installing multiple Python versions and managing Python virtual environments on a Mac is notoriously painful, and choosing the wrong tools for the job can lead to countless lost development hours. To make matters worse, many highly-ranked online guides suggest Python environment management strategies that are are outdated, inadequate, and will only lead to further frustration in your future.
 
