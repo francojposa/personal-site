@@ -23,7 +23,7 @@ Save yourself the headaches.
 
 Do not brew install python3, do not mess with Python 2 or Python 3 versions that ship with MacOS. Most importantly, do not try to install Virtualenvwrapper on its own. The standard Virtualenvwrapper does not play well with Pyenv, but for compatibility, Virtualenvwrapper has been implemented as a [Pyenv plugin](https://github.com/pyenv/pyenv/wiki/Plugins).
 
-## 1. Install Pyenv-Virtualenvwrapper
+## 1. Install Pyenv-Virtualenvwrapper with Homebrew
 
 ```
 % brew install pyenv-virtualenvwrapper

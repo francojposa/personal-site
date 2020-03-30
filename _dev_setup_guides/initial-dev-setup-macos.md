@@ -72,7 +72,7 @@ Homebrew is the unofficial official package manager for MacOS, and will be your 
 
 Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The installer will download and install the XCode Developer Command Line Tools if you do not already have the most up-to-date versions - this process can take quite awhile.
 
-## 3. Install Sublime Text & Visual Studio Code
+## 3. Install Sublime & VS Code with Homebrew
 
 A general-purpose text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts & text files, due to its quick startup, and VS Code for more involved development work where the VSCode plugins and tooling offer more functionality.
 
