@@ -52,6 +52,8 @@ Put it all together to initialize with our preferred superuser:
 
 This replaces the initialization step that would normally be run (without the option to name the superuser) the first time you call `brew services start postgres`
 
+See the [Troubleshooting](#troubleshooting) section for common issues that can arise at this step.
+
 ## 3. Start Postgres
 
 You may start and stop Postgres with either the built-in [`pg_ctl` command](https://www.postgresql.org/docs/9.5/app-pg-ctl.html) or the [`brew services`](https://github.com/Homebrew/homebrew-services) process manager. The primary difference is that a Postgres process started with `pg_ctl` will die when you exit the terminal session, while `brew services` will keep Postgres running in the background. Keeping Postgres running is probably the desired behavior for most developers.
@@ -62,6 +64,8 @@ You may start and stop Postgres with either the built-in [`pg_ctl` command](http
 % pg_ctl -D /usr/local/var/postgres start
 ...[startup logs]
 ```
+
+If you receive an error from `pg_ctl`, Postgres is likely already running.
 
 `brew services` does not require specifying the directory:
 
@@ -138,8 +142,6 @@ Stopping `postgresql`... (might take a while)
 ==> Successfully stopped `postgresql` (label: homebrew.mxcl.postgresql)
 ```
 
-
-
 ## Troubleshooting
 
 I have sometimes found that the Homebrew Postgres installer will take it upon itself to initialize the cluster even if we don't call `brew services start`. If this is the case, you will receive an error like this from `initdb`:
@@ -168,7 +170,7 @@ If this happens, it's likely too late - Homebrew has initialized the instance wi
 
 Assuming this is truly a fresh Postgres install and we don't have any old data in `/usr/local/var/postgres` that we want to keep, this can be "fixed" by deleting the whole instance.
 
-**THIS WILL DELETE ALL OF YOUR POSTGRES DATA** which is dangerous if you want that data, but also makes it the ultimate troubleshooting solution.
+**THIS WILL DELETE ALL OF YOUR POSTGRES DATA**
 
 ```
 % rm -rf /usr/local/var/postgres
