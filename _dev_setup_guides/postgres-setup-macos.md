@@ -34,7 +34,7 @@ Or, if you don't want/need a background service you can just run:
 
 ## 2.  Initialize Postgres with `postgres` as the Default User
 
-`brew services start` is the command we want to initially avoid, as it does not allow us to set the initial superuser name for a new Postgres instance.
+Do not use `brew services start` yet! This is the command we want to avoid at first, as it does not allow us to set the initial superuser name for a new Postgres instance.
 
 The [PostgreSQL wiki First Steps page](https://wiki.postgresql.org/wiki/First_steps) alludes to the solution: [the `initdb` command](https://www.postgresql.org/docs/9.5/app-initdb.html). `initdb` is the CLI for initializing a new Postgres instance, and it allows the user to set all instance parameters, including the one we care about here:
 
@@ -138,3 +138,40 @@ Stopping `postgresql`... (might take a while)
 ==> Successfully stopped `postgresql` (label: homebrew.mxcl.postgresql)
 ```
 
+
+
+## Troubleshooting
+
+I have sometimes found that the Homebrew Postgres installer will take it upon itself to initialize the cluster even if we don't call `brew services start`. If this is the case, you will receive an error like this from `initdb`:
+
+```
+initdb: error: directory "/usr/local/var/postgres" exists but is not empty
+If you want to create a new database system, either remove or empty
+the directory "/usr/local/var/postgres" or run initdb
+with an argument other than "/usr/local/var/postgres".
+```
+
+If this happens, it's likely too late - Homebrew has initialized the instance with your MacOS username as the owner of everything. Confirm by listing the databases to see their owners:
+
+```
+% psql -d postgres -c "\l"
+
+                                   List of databases
+   Name    |    Owner    | Encoding | Collate | Ctype |        Access privileges        
+-----------+-------------+----------+---------+-------+---------------------------------
+ postgres  | franco.posa | UTF8     | C       | C     | 
+ template0 | franco.posa | UTF8     | C       | C     | =c/"franco.posa"               +
+           |             |          |         |       | "franco.posa"=CTc/"franco.posa"
+ template1 | franco.posa | UTF8     | C       | C     | =c/"franco.posa"               +
+           |             |          |         |       | "franco.posa"=CTc/"franco.posa"
+```
+
+Assuming this is truly a fresh Postgres install and we don't have any old data in `/usr/local/var/postgres` that we want to keep, this can be "fixed" by deleting the whole instance.
+
+**THIS WILL DELETE ALL OF YOUR POSTGRES DATA** which is dangerous if you want that data, but also makes it the ultimate troubleshooting solution.
+
+```
+% rm -rf /usr/local/var/postgres
+```
+
+Now you can jump back to [Step 2](#2--initialize-postgres-with-postgres-as-the-default-user).

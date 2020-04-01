@@ -3,5 +3,9 @@ collections:
     output: true
     permalink: /resources/development/:title
 
+
+kramdown:
+    auto_ids: true
+
 # plugins:
 #   - jekyll-sitemap
