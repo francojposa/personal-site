@@ -42,10 +42,99 @@ The [PostgreSQL wiki First Steps page](https://wiki.postgresql.org/wiki/First_st
 >`--username=username` selects the user name of the database superuser. This defaults to the name of the effective user running initdb.
 >It is really not important what the superuser's name is, but one might choose to keep the customary name postgres, even if the operating system user's name is different."_
 
-The only other information that `initdb` needs is the directory to initialize the database cluster into, provided by the `-D/--pgdata` flag. For a Homebrew install, this should be `usr/local/var/postgres`.
+The only other information that `initdb` needs is the directory to initialize the database cluster into, provided by the `-D/--pgdata` flag. For a Homebrew install, this should be `/usr/local/var/postgres`.
 
 Put it all together to initialize with our preferred superuser:
 
 ```
 % initdb -D /usr/local/var/postgres -U postgres
 ```
+
+This replaces the initialization step that would normally be run (without the option to name the superuser) the first time you call `brew services start postgres`
+
+## 3. Start Postgres
+
+You may start and stop Postgres with either the built-in [`pg_ctl` command](https://www.postgresql.org/docs/9.5/app-pg-ctl.html) or the [`brew services`](https://github.com/Homebrew/homebrew-services) process manager. The primary difference is that a Postgres process started with `pg_ctl` will die when you exit the terminal session, while `brew services` will keep Postgres running in the background. Keeping Postgres running is probably the desired behavior for most developers.
+
+`pg_ctl` requires the `-D` argument to know where the Postgres instance is located:
+
+```
+% pg_ctl -D /usr/local/var/postgres start
+...[startup logs]
+```
+
+`brew services` does not require specifying the directory:
+
+```
+% brew services start postgres
+==> Successfully started `postgresql` (label: homebrew.mxcl.postgresql)
+```
+
+
+## 4. Login to the Postgres CLI
+
+[`Psql`](https://www.postgresql.org/docs/9.3/app-psql.html) is the Postgres interactive terminal, used to query interactively as well as manage the cluster with meta-commands.
+
+By default, `psql` will attempt to log in with the currently-active username, so we have to provide the `-U/--username` flag to log in as `postgres`:
+
+```
+% psql -U postgres
+psql (12.2)
+Type "help" for help.
+
+postgres=#
+```
+
+Now we can see that `postgres` is the only user on the instance:
+
+```
+postgres=# \du 
+                                   List of roles
+ Role name |                         Attributes                         | Member of 
+-----------+------------------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+```
+
+As well as the owner of the existing databases:
+```
+postgres=# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+```
+
+## 5. Create Your First Database
+
+Postgres allows hyphenated database names but hyphenated names don't work with the CLI's autocomplete, so delimiting with underscores will make your life a bit easier.
+
+```
+postgres=# CREATE DATABASE first_test;
+CREATE DATABASE
+```
+
+Connect & try the tab-completion available on the database names:
+
+```
+postgres=# \c f[press tab here to autocomplete database name]
+postgres=# \c first_test
+You are now connected to database "first_test" as user "postgres".
+first_test=#
+```
+
+## 6. Exit & Stop Postgres
+
+From the `psql` command line, `\quit`, `\q`, and `Ctrl-D` will all work to exit the interactive session.
+
+If you want to stop the Postgres instance altogether, use `brew services` - `pg_ctl` has a `stop` command but it doesn't always stop all the background processes that Postgres runs.
+
+```
+% brew services stop postgres
+Stopping `postgresql`... (might take a while)
+==> Successfully stopped `postgresql` (label: homebrew.mxcl.postgresql)
+```
+

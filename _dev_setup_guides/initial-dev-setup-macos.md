@@ -91,4 +91,3 @@ brew cask install visual-studio-code
 ```
 
 Finally, test out  the VS Code launcher out as well: `code ~/.zshrc`.
-
