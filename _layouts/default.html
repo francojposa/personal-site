@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>francoposa - {{ page.title }}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,10 @@
                         {% if page.url contains "/resources" %}style="text-decoration: underline;"
                         {% endif %}>resources</a>
                 </div>
-                <div class="col-md-2 col-xs-6 top-row-item text-center">about</div>
+                <div class="col-md-2 col-xs-6 top-row-item text-center"><a href="/about"
+                    {% if page.url contains "/about" %}style="text-decoration: underline;"
+                    {% endif %}>about</a>
+            </div>
             </div>
         </div>
         <div class="container">

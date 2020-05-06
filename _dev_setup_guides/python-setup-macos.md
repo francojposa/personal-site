@@ -1,7 +1,7 @@
 ---
 layout: resource
 title: "Python MacOS Dev Setup Part 1: Pyenv + Virtualenvwrapper"
-slug: python-setup-macos
+slug: python-macos-1
 description: "Worry-free Python development environment setup for MacOS"
 order_number: 3
 ---

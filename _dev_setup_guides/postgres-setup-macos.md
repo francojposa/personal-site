@@ -1,7 +1,7 @@
 ---
 layout: resource
 title: "Postgres MacOS Dev Setup"
-slug: postgres-setup-macos
+slug: postgres-macos
 description: "PostgreSQL setup & default 'postgres' user configuration for MacOS"
 order_number: 4
 ---

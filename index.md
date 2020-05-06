@@ -1,5 +1,5 @@
 ---
-title: Franco Posa - Home
+title: home
 layout: default
 ---
 
