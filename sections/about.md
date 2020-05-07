@@ -27,3 +27,13 @@ In my spare time, I enjoy building a deep understanding of topics across all are
 As software engineers our careers are a never-ending journey of self-education, and we spend countless hours reading textbooks, documentation, guides, and forums. This content is often easy to come by, but truly excellent resources are rare and invaluable.
 
 With this site I hope to provide high-quality, useful, and accessible software engineering resources to professionals and amateurs alike while sharpening my writing skills and leaving the Internet a little freer and more open than I found it.
+
+Built with:
+
+* Content: Jekyll static site generator
+
+* Style: Bootstrap 4
+
+* Hosting: GitHub Pages
+
+* DNS & CDN: Cloudflare
