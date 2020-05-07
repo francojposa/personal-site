@@ -8,8 +8,8 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -19,27 +19,28 @@
     <div>
         <div class="container">
             <div class="row top-row">
-                <div id="top-row-title" class="col-md-4 col-xs-12">
+                <div id="navbar-site-title" class="navbar-site-title col-md-3 col-xs-12">
                     <a href="/">francoposa.io</a>
                 </div>
-                <div class="col-md-2 col-xs-6 top-row-item text-center"></div>
-                <div class="col-md-2 col-xs-6 top-row-item text-center">projects</div>
-                <div class="col-md-2 col-xs-6 top-row-item text-center"><a href="/resources"
+                <div id="" class="navbar-spacer col-md-2 col-xs-6 text-center"></div>
+                <div class="navbar-section-title col-md-2 col-xs-6 text-center">projects</div>
+                <div class="navbar-section-title col-md-2 col-xs-6 text-center"><a href="/resources"
                         {% if page.url contains "/resources" %}style="text-decoration: underline;"
                         {% endif %}>resources</a>
                 </div>
-                <div class="col-md-2 col-xs-6 top-row-item text-center"><a href="/about"
+                <div class="navbar-section-title col-md-2 col-xs-6 text-center"><a href="/about"
                         {% if page.url contains "/about" %}style="text-decoration: underline;" {% endif %}>about</a>
                 </div>
             </div>
         </div>
         <div class="container">
-            <!-- <div class="row top-row-underline"></div> -->
             <div class="content col-md-10 offset-md-1 col-sm-12 col-xs-12">
+                <!-- <h2>Resources</h2>
+                <div class="underline"></div> -->
                 {{ content }}
             </div>
-
         </div>
+    </div>
 
     </div>
 </body>

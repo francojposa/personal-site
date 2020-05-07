@@ -38,11 +38,23 @@ a:active {
     font-family: 'Roboto Mono', 'Courier', serif;
     padding: 1.5rem 1.5rem 1.0rem 1.5rem ;
 }
-.top-row-item {
-    font-size: 1.5rem;
+
+.navbar-site-title {
+    font-size: 1.75rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
 }
+
+.navbar-spacer {
+    padding: 0;
+}
+
+.navbar-section-title {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
 .underline {
     margin-left: 5px;
     margin-right: 5px;
@@ -77,13 +89,6 @@ div > .highlighter-rouge {
     color: #191414;
     background-color:rgb(230,230,230);
 }
-
-#top-row-title {
-    font-size: 2rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-} 
-
 
 .page-title {
     padding: 1.5rem 0.25rem 0.5rem 0.25rem;
