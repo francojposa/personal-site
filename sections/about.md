@@ -8,7 +8,7 @@ permalink: /about
 
 ---
 
-I am a software engineer over four years of experience designing, writing, and testing backend services in Python & Golang.
+I am an engineer with over four years of experience designing, writing, and testing software in Python & Golang.
 
 I love to design and build. I am passionate about clean architecture, clean code, and idiomatic best practices.
 I am biased towards minimalism and simplicity:
@@ -24,6 +24,6 @@ In my spare time, I enjoy building a deep understanding of topics across all are
 
 ---
 
-As software engineers our careers are a never-ending journey of self-education. From our first Hello World to our most complex projects, we spend countless hours reading software engineering textbooks, documentation, guides, and forums. This content is often easy to come by, but truly excellent resources are rare and invaluable.
+As software engineers our careers are a never-ending journey of self-education, and we spend countless hours reading textbooks, documentation, guides, and forums. This content is often easy to come by, but truly excellent resources are rare and invaluable.
 
-With this site I hope to provide high-quality, useful, and accessible software engineering resources to professionals and amateurs alike while sharpening my writing skills and leaving the Internet a little freer and more open than when I found it.
+With this site I hope to provide high-quality, useful, and accessible software engineering resources to professionals and amateurs alike while sharpening my writing skills and leaving the Internet a little freer and more open than I found it.
