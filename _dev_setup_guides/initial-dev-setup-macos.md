@@ -1,8 +1,10 @@
 ---
 layout: resource
-title: "Initial MacOS Dev Setup: Zsh, Homebrew, Sublime Text, and VS Code"
-slug: macos-general
+title: "Initial MacOS Dev Setup"
+slug: initial-dev-macos
 description: "General development environment setup for MacOS: Zsh, Homebrew, Sublime Text, and VS Code"
+date: 2020-02-02
+author: Franco Posa
 order_number: 1
 ---
 ## The Very Basics

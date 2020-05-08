@@ -3,6 +3,8 @@ layout: resource
 title: "Postgres MacOS Dev Setup"
 slug: postgres-macos
 description: "PostgreSQL setup & default 'postgres' user configuration for MacOS"
+date: 2020-03-29
+author: Franco Posa
 order_number: 4
 ---
 
@@ -38,9 +40,9 @@ Do not use `brew services start` yet! This is the command we want to avoid at fi
 
 The [PostgreSQL wiki First Steps page](https://wiki.postgresql.org/wiki/First_steps) alludes to the solution: [the `initdb` command](https://www.postgresql.org/docs/9.5/app-initdb.html). `initdb` is the CLI for initializing a new Postgres instance, and it allows the user to set all instance parameters, including the one we care about here:
 
->"_`-U username`
+>"`-U username`
 >`--username=username` selects the user name of the database superuser. This defaults to the name of the effective user running initdb.
->It is really not important what the superuser's name is, but one might choose to keep the customary name postgres, even if the operating system user's name is different."_
+>It is really not important what the superuser's name is, but one might choose to keep the customary name postgres, even if the operating system user's name is different."
 
 The only other information that `initdb` needs is the directory to initialize the database cluster into, provided by the `-D/--pgdata` flag. For a Homebrew install, this should be `/usr/local/var/postgres`.
 

@@ -1,8 +1,10 @@
 ---
 layout: resource
-title: Golang MacOS Dev Setup & Hello World
+title: Golang MacOS Dev Setup
 slug: golang-macos
 description: "Golang development environment setup & Hello World program for MacOS"
+date: 2020-01-24
+author: Franco Posa
 order_number: 2
 ---
 
@@ -34,7 +36,7 @@ This does not have to be in your home folder, just make sure it matches what you
 ```
 Create `hello.go` in your preferred editor:
 
-```
+```go
 package main
 
 import "fmt"
