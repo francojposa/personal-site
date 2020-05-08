@@ -23,14 +23,14 @@ Configuration for specific programming languages and toolchains will be left for
 
 The following assumes you are using the MacOS built-in Terminal.app
 
-### Setting up Terminal.app to use zsh
+#### Set up Terminal.app to use zsh
 1. Open the Terminal application
 2. Open the Preferences pane using `Cmd +  ,` or by navigating to Terminal > Preferences in the menu bar
 3. In the General tab, note that "Default login shell" is selected. On MacOS Catalina, the default shell has been updated to `/bin/zsh`. On previous MacOS versions, you can enter `/bin/zsh` in the "Command (complete path)" option to switch from the default (`/bin/bash`) to `zsh`
 4. Use the Profiles tab to set any font, color, and cursor preferences you may have.
 
 
-### Your first entry into `~/.zshrc`
+#### Your first entry into `~/.zshrc`
 
 Your zsh configuration will largely be managed in `.zshrc` file in your home directory. This file is executed as a shell script whenever you initiate a new zsh session.
 
@@ -78,7 +78,7 @@ Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The i
 
 A general-purpose text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts & text files, due to its quick startup, and VS Code for more involved development work where the VSCode plugins and tooling offer more functionality.
 
-### Install Sublime Text editor and command line launcher
+#### Install Sublime Text editor and command line launcher
 
 ```
 brew cask install sublime-text
@@ -86,7 +86,7 @@ brew cask install sublime-text
 
 The brew install sets up the `subl` launcher command for you, so go ahead and try it out: `subl ~/.zshrc`. Your zsh config will now be much easier to work with.
 
-### Install Visual Studio Code editor & command line launcher
+#### Install Visual Studio Code editor & command line launcher
 
 ```
 brew cask install visual-studio-code
