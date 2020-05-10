@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resource-post
 title: "Postgres MacOS Dev Setup"
 slug: postgres-macos
 description: "PostgreSQL setup & default 'postgres' user configuration for MacOS"

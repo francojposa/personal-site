@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<h1 class="page-title">Projects</h1>
+<div class="underline"></div>
+
+<h2>Writing a Modern Python Framework</h2>
+<ul>
+    {% assign ordered_python_framework_posts = site.project_python_framework | sort:"order_number" %}
+    {% for python_framework_post in ordered_python_framework_posts %}
+    <li>
+        <h5><a
+                href="{{ python_framework_post.url }}">{{ python_framework_post.title  | remove:"Writing a Modern Python Framework: " }}</a>
+        </h5>
+        <p>{{ python_framework_post.description }}</p>
+    </li>
+    {% endfor %}
+</ul>

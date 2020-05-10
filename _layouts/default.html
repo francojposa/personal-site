@@ -23,7 +23,10 @@
                     <a href="/">francoposa.io</a>
                 </div>
                 <div id="" class="navbar-spacer col-md-2 col-xs-6 text-center"></div>
-                <div class="navbar-section-title col-md-2 col-xs-6 text-center">projects</div>
+                <div class="navbar-section-title col-md-2 col-xs-6 text-center"><a href="/projects"
+                        {% if page.url contains "/projects" %}style="text-decoration: underline;"
+                        {% endif %}>projects</a>
+                </div>
                 <div class="navbar-section-title col-md-2 col-xs-6 text-center"><a href="/resources"
                         {% if page.url contains "/resources" %}style="text-decoration: underline;"
                         {% endif %}>resources</a>
@@ -35,8 +38,6 @@
         </div>
         <div class="container">
             <div class="content col-md-10 offset-md-1 col-sm-12 col-xs-12">
-                <!-- <h2>Resources</h2>
-                <div class="underline"></div> -->
                 {{ content }}
             </div>
         </div>

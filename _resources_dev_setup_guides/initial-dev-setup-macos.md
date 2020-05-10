@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resource-post
 title: "Initial MacOS Dev Setup"
 slug: initial-dev-macos
 description: "General development environment setup for MacOS: Zsh, Homebrew, Sublime Text, and VS Code"

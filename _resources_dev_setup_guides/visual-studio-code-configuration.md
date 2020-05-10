@@ -1,7 +1,7 @@
 ---
-layout: resource
+layout: resource-post
 title: "Visual Studio Code Settings and Configuration"
-slug: visual-studio-code-settings-configuration
+slug: visual-studio-code-configuration
 description: "Recommended configurations for a general-purpose dev environment in VS Code"
 date: 2020-05-07
 author: Franco Posa

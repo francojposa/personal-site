@@ -96,6 +96,11 @@ div > .highlighter-rouge {
     padding: 1.5rem 0.25rem 0.5rem 0.25rem;
 }
 
+.content .page-title a {
+    text-decoration: none;
+    /* padding: 1.5rem 0.25rem 0.5rem 0.25rem; */
+}
+
 .content {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     padding: 1rem;

@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resource-post
 title: Golang MacOS Dev Setup
 slug: golang-macos
 description: "Golang development environment setup & Hello World program for MacOS"

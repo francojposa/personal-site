@@ -2,16 +2,30 @@
 layout: default
 ---
 
+<h2 class="page-title"><a href="/projects">Projects</a></h2>
+<div class="underline"></div>
+
+<h4>Writing a Modern Python Framework</h4>
+<ul>
+    {% assign ordered_python_framework_posts = site.project_python_framework | sort:"order_number" %}
+    {% for python_framework_post in ordered_python_framework_posts %}
+    <li>
+        <p><a
+                href="{{ python_framework_post.url }}">{{ python_framework_post.title  | remove:"Writing a Modern Python Framework: " }}</a>
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+
 <h2 class="page-title">Resources</h2>
 <div class="underline"></div>
 
-<h3>Development Setup & Configuration</h2>
-    <ul>
-        {% assign ordered_dev_setup_guides = site.resources_dev_setup_guides | sort:"order_number" %}
-        {% for dev_setup_guide in ordered_dev_setup_guides %}
-        <li>
-            <hp><a href="{{ dev_setup_guide.url }}">{{ dev_setup_guide.title }}</a></p>
-                <!-- <p>{{ dev_setup_guide.description }}</p> -->
-        </li>
-        {% endfor %}
-    </ul>
+<h4>Development Setup & Configuration</h4>
+<ul>
+    {% assign ordered_dev_setup_guides = site.resources_dev_setup_guides | sort:"order_number" %}
+    {% for dev_setup_guide in ordered_dev_setup_guides %}
+    <li>
+        <hp><a href="{{ dev_setup_guide.url }}">{{ dev_setup_guide.title }}</a></p>
+    </li>
+    {% endfor %}
+</ul>

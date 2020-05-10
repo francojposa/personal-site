@@ -3,23 +3,35 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% assign ordered_dev_setup_guides = site.resources_dev_setup_guides | sort:"order_number" %}
-    {% for dev_setup_guide in ordered_dev_setup_guides %}
-    <url>
-      <loc>{{ site.url }}{{ dev_setup_guide.url }}</loc>
-      <lastmod>{{ dev_setup_guide.date | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.5</priority>
-    </url>
-    {% endfor %}
 
-  {% for page in site.pages %}
+{% assign ordered_python_framework_posts = site.project_python_framework | sort:"order_number" %}
+  {% for python_framework_post in ordered_python_framework_posts %}
   <url>
-    <loc>{{ site.url }}{{ page.url | remove: "/assets/css/style.css" }}</loc>
-    {% if page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
+    <loc>{{ site.url }}{{ python_framework_post.url }}</loc>
+    <lastmod>{{ python_framework_post.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
-  {% endfor %}
+{% endfor %}
+
+{% assign ordered_dev_setup_guides = site.resources_dev_setup_guides | sort:"order_number" %}
+  {% for dev_setup_guide in ordered_dev_setup_guides %}
+  <url>
+    <loc>{{ site.url }}{{ dev_setup_guide.url }}</loc>
+    <lastmod>{{ dev_setup_guide.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+{% endfor %}
+
+{% for page in site.pages %}
+<url>
+  <loc>{{ site.url }}{{ page.url | remove: "/assets/css/style.css" }}</loc>
+  {% if page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+  {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+{% endfor %}
+
 </urlset>
