@@ -1,5 +1,5 @@
 collections:
-  dev_setup_guides:
+  resources_dev_setup_guides:
     output: true
     permalink: /resources/dev-setup/:title
 

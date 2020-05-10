@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% assign ordered_dev_setup_guides = site.dev_setup_guides | sort:"order_number" %}
+  {% assign ordered_dev_setup_guides = site.resources_dev_setup_guides | sort:"order_number" %}
     {% for dev_setup_guide in ordered_dev_setup_guides %}
     <url>
       <loc>{{ site.url }}{{ dev_setup_guide.url }}</loc>
