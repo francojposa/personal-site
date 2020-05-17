@@ -5,18 +5,6 @@ layout: default
 <h2 class="page-title"><a href="/projects">Projects</a></h2>
 <div class="underline"></div>
 
-<h4>Writing a Modern Python Framework</h4>
-<ul>
-    {% assign ordered_python_framework_posts = site.project_python_framework | sort:"order_number" %}
-    {% for python_framework_post in ordered_python_framework_posts %}
-    <li>
-        <p><a
-                href="{{ python_framework_post.url }}">{{ python_framework_post.title  | remove:"Writing a Modern Python Framework: " }}</a>
-        </p>
-    </li>
-    {% endfor %}
-</ul>
-
 <h2 class="page-title">Resources</h2>
 <div class="underline"></div>
 
