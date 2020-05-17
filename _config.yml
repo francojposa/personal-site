@@ -1,7 +1,7 @@
 collections:
-  project_python_framework:
+  project_learn_auth_with_golang:
     output: true
-    permalink: /projects/python-framework/:title
+    permalink: /projects/learn-auth-with-golang/:title
   resources_dev_setup_guides:
     output: true
     permalink: /resources/dev-setup/:title

@@ -4,11 +4,11 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-{% assign ordered_python_framework_posts = site.project_python_framework | sort:"order_number" %}
-  {% for python_framework_post in ordered_python_framework_posts %}
+{% assign ordered_learn_auth_with_golang_posts = site.project_learn_auth_with_golang | sort:"order_number" %}
+{% for learn_auth_with_golang_post in ordered_learn_auth_with_golang_posts %}
   <url>
-    <loc>{{ site.url }}{{ python_framework_post.url }}</loc>
-    <lastmod>{{ python_framework_post.date | date_to_xmlschema }}</lastmod>
+    <loc>{{ site.url }}{{ learn_auth_with_golang_post.url }}</loc>
+    <lastmod>{{ learn_auth_with_golang_post.date | date_to_xmlschema }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
