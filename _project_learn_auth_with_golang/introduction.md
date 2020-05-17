@@ -1,8 +1,8 @@
 ---
 layout: project-post
-title: "Learning Auth With Golang: Intro"
+title: "Learning Auth With Golang: Introduction"
 slug: intro
-description: "Learn by Doing: Rolling Our Own Auth"
+description: "Let's Roll Our Own Auth"
 date: 2020-05-17
 author: Franco Posa
 order_number: 1
@@ -13,6 +13,8 @@ As an engineer developing web applications, I find myself to be particularly cur
 
 This may be good advice when it comes to something as sensitive as authentication and authorization, but  I personally do not learn very well this way. I often need to take a system apart and put it back together, or -- even better -- build the system myself from scratch in order to really, _really_ get it. 
 
-So for my own education and that of any other experiential learners that may come across this project, I am setting out to roll my own authentication and authorization from the ground up and document it all. While there is no intent to turn this project into anything serious or production-ready, I will not kneecap the experience by intentionally making a simplified, toy implementation.
+So for my own education and that of any other experiential learners that may come across this project, I am setting out to roll my own authentication and authorization provider from the ground up and document it all. While there is no intent to turn this project into anything serious or production-ready, I will not kneecap the experience by intentionally making a simplified, toy implementation. 
 
-Everything will be open source and I welcome feedback on the code, its documentation, and these posts. Let's see how far we can take it!
+Everything will be open source and I welcome feedback on the code, its documentation, and these posts.
+
+Let's see how far we can take it!

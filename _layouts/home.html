@@ -5,12 +5,14 @@ layout: default
 <h2 class="page-title"><a href="/projects">Projects</a></h2>
 <div class="underline"></div>
 
-<h4>Learn Auth With Golang</h4>
+<h4>Learning Authentication & Authorization With Golang</h4>
 <ul>
     {% assign ordered_learn_auth_with_golang_posts = site.project_learn_auth_with_golang | sort:"order_number" %}
     {% for learn_auth_with_golang_post in ordered_learn_auth_with_golang_posts %}
     <li>
-        <hp><a href="{{ learn_auth_with_golang_post.url }}">{{ learn_auth_with_golang_post.title }}</a></p>
+        <p><a href="{{ learn_auth_with_golang_post.url }}">{{ learn_auth_with_golang_post.title  | remove:"Learning Auth With Golang: " }}:
+                {{ learn_auth_with_golang_post.description }}</a>
+        </p>
     </li>
     {% endfor %}
 </ul>
