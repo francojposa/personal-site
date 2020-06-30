@@ -32,8 +32,14 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 ```
 % which java
 /usr/local/opt/openjdk/bin/java
+
 % which javac
 /usr/local/opt/openjdk/bin/javac
+
+% java --version
+openjdk 13.0.2 2020-01-14
+OpenJDK Runtime Environment (build 13.0.2+8)
+OpenJDK 64-Bit Server VM (build 13.0.2+8, mixed mode, sharing)
 ```
 
 ## 2. Hello Java
