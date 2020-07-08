@@ -1,6 +1,6 @@
 ---
 layout: resource-post
-title: "Postgres MacOS Dev Setup"
+title: "Postgres Dev Setup for MacOS"
 slug: postgres-macos
 description: "PostgreSQL setup & default 'postgres' user configuration for MacOS"
 date: 2020-03-29

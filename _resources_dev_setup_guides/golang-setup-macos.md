@@ -1,6 +1,6 @@
 ---
 layout: resource-post
-title: Golang MacOS Dev Setup
+title: "Golang Dev Setup for MacOS"
 slug: golang-macos
 description: "A beginner's Golang development environment setup for MacOS"
 date: 2020-01-24

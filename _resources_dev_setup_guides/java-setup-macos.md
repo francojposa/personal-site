@@ -1,6 +1,6 @@
 ---
 layout: resource-post
-title: "Java MacOS Dev Setup"
+title: "Java Dev Setup for MacOS"
 slug: java-macos
 description: "A beginner's Java development environment setup for MacOS"
 date: 2020-06-11

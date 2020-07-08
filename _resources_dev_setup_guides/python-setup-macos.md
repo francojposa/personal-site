@@ -1,6 +1,6 @@
 ---
 layout: resource-post
-title: "Python MacOS Dev Setup Part 1: Pyenv + Virtualenvwrapper"
+title: "Python Dev Setup for MacOS Part 1: Pyenv + Virtualenvwrapper"
 slug: python-macos-1
 description: "Worry-free Python development environment setup for MacOS"
 date: 2020-01-24
