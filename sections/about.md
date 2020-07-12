@@ -17,7 +17,7 @@ I am biased towards minimalism and simplicity:
 
 > "There should be one -- and preferably only one -- obvious way to do it." - _The Zen of Python_
 
-In my spare time, I enjoy building a deep understanding of topics across all areas of software engineering, particularly lower-level systems engineering - operating systems, compilers, protocols, and more.
+In my spare time, I enjoy building a deep understanding of topics across all areas of software engineering.
 
 
 ## About this Site
