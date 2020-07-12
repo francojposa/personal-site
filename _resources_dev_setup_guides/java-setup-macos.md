@@ -12,9 +12,7 @@ order_number: 3
 
 ### Install OpenJDK
 
-We are going to use OpenJDK and not Oracle's JDK. You could write a very long book on why this is correct and morally good choice, and I am sure someone has. The short version is "FOSS good, Oracle bad", even though Oracle contributes to the OpenJDK project. Like I said, it would be a long book. 
-
-Anyway:
+With a preference towards FOSS, we are going to use OpenJDK and not Oracle's JDK.
 
 ```
 % brew install openjdk
