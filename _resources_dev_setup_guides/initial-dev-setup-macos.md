@@ -24,14 +24,14 @@ Configuration for specific programming languages and toolchains will be left for
 
 The following assumes you are using the MacOS built-in Terminal.app
 
-#### Set up Terminal.app to use zsh
+### Set up Terminal.app to use zsh
+
 1. Open the Terminal application
 2. Open the Preferences pane using `Cmd +  ,` or by navigating to Terminal > Preferences in the menu bar
 3. In the General tab, note that "Default login shell" is selected. On MacOS Catalina, the default shell has been updated to `/bin/zsh`. On previous MacOS versions, you can enter `/bin/zsh` in the "Command (complete path)" option to switch from the default (`/bin/bash`) to `zsh`
 4. Use the Profiles tab to set any font, color, and cursor preferences you may have.
 
-
-#### Your first entry into `~/.zshrc`
+### Your first entry into `~/.zshrc`
 
 Your zsh configuration will largely be managed in `.zshrc` file in your home directory. This file is executed as a shell script whenever you initiate a new zsh session.
 
@@ -71,7 +71,9 @@ You should see the contents of your `PATH` printed out. Compare the output to di
 
 ## 2. Install Homebrew
 
-Homebrew is the unofficial official package manager for MacOS, and will be your first stop for installing and managing a wide variety of development tools. I always opt to `brew install` a package if possible rather than building from source or using a Mac disk image download. When it comes time to uninstall, upgrade, or manage dependencies, it's nice to be able to work with most of your dev tools using the same commands and working in the same directories.
+Homebrew is the unofficial official package manager for MacOS, and will be your first stop for installing and managing a wide variety of development tools.
+
+I always opt to `brew install` a package if possible rather than building from source or using a Mac disk image download. When it comes time to uninstall, upgrade, or manage dependencies, it's nice to be able to work with most of your dev tools using the same commands and working in the same directories.
 
 Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The installer will download and install the XCode Developer Command Line Tools if you do not already have the most up-to-date versions - this process can take quite awhile.
 
@@ -79,7 +81,7 @@ Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The i
 
 A general-purpose text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts & text files, due to its quick startup, and VS Code for more involved development work where the VSCode plugins and tooling offer more functionality.
 
-#### Install Sublime Text editor and command line launcher
+### Install Sublime Text editor & CLI
 
 ```
 brew cask install sublime-text
@@ -87,13 +89,18 @@ brew cask install sublime-text
 
 The brew install sets up the `subl` launcher command for you, so go ahead and try it out: `subl ~/.zshrc`. Your zsh config will now be much easier to work with.
 
-#### Install Visual Studio Code editor & command line launcher
+### Install Visual Studio Code editor & CLI
 
 ```
 brew cask install visual-studio-code
 ```
 
 Finally, test out  the VS Code launcher out as well: `code ~/.zshrc`.
+
+VS Code is endlessly configurable for development in almost any progamming language and environment,
+but there are a few basic settings and keybindings that can get you off to a solid start.
+
+I have captured my basic VS Code setup in the [Visual Studio Code Settings and Configuration](/resources/dev-setup/visual-studio-code-configuration).
 
 ## Bonus: Install the Hack Font
 
