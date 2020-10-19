@@ -4,6 +4,7 @@ title: "Java Dev Setup for MacOS"
 slug: java-macos
 description: "A beginner's Java development environment setup for MacOS"
 published_date: 2020-06-11
+updated_date: 2020-06-11
 author: Franco Posa
 order_number: 3
 ---
