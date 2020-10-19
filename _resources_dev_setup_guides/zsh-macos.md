@@ -3,7 +3,7 @@ layout: resource-post
 title: "Zsh Configuration for MacOS"
 slug: zsh-configuration-macos
 description: "Configuration for Zsh supporting development in Python, Golang, and Kotlin on MacOS"
-date: 2020-07-08
+published_date: 2020-07-08
 author: Franco Posa
 order_number: 8
 ---

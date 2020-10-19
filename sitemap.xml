@@ -27,7 +27,7 @@ layout: null
 {% for page in site.pages %}
 <url>
   <loc>{{ site.url }}{{ page.url | remove: "/assets/css/style.css" }}</loc>
-  {% if page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+  {% if page.published_date %}<lastmod>{{ page.published_date | date_to_xmlschema }}</lastmod>
   {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>

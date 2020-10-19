@@ -3,7 +3,7 @@ layout: resource-post
 title: "Golang Dev Setup for MacOS"
 slug: golang-macos
 description: "A beginner's Golang development environment setup for MacOS"
-date: 2020-01-24
+published_date: 2020-01-24
 author: Franco Posa
 order_number: 2
 ---

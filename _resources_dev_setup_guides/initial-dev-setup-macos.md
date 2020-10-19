@@ -3,7 +3,8 @@ layout: resource-post
 title: "Initial Dev Setup for MacOS"
 slug: initial-dev-macos
 description: "General development environment setup for MacOS: Zsh, Homebrew, Sublime Text, and VS Code"
-date: 2020-02-02
+published_date: 2020-02-02
+updated_date: 2020-10-18
 author: Franco Posa
 order_number: 1
 ---
@@ -15,7 +16,7 @@ For my purposes and preferences, these basic components are:
 1. Configure zsh 
 2. Set Terminal app preferences
 3. Install Homebrew package manager
-4. Install & configure Sublime text 3
+4. Install Sublime Text and Visual Studio Code
 
 Configuration for specific programming languages and toolchains will be left for subsequent guides.
 
@@ -74,7 +75,7 @@ Homebrew is the unofficial official package manager for MacOS, and will be your 
 
 Follow the instructions at [brew.sh](https://brew.sh) to install Homebrew. The installer will download and install the XCode Developer Command Line Tools if you do not already have the most up-to-date versions - this process can take quite awhile.
 
-## 3. Install Sublime & VS Code with Homebrew
+## 3. Install Sublime Text and Visual Studio Code with Homebrew
 
 A general-purpose text editor is essential to your development environment. I use both Sublime Text and VS Code - Sublime for quick manipulation of scripts & text files, due to its quick startup, and VS Code for more involved development work where the VSCode plugins and tooling offer more functionality.
 
@@ -93,3 +94,12 @@ brew cask install visual-studio-code
 ```
 
 Finally, test out  the VS Code launcher out as well: `code ~/.zshrc`.
+
+## Bonus: Install the Hack Font
+
+Hack is by far my favorite monospaced font for text editors, and IDEs,
+and installing it is the first step I take on any new dev computer.
+
+Hack can be downloaded [here](https://sourcefoundry.org/hack/). Use Finder to unzip the .ttf files, open them, and click "Install Font"
+
+Hack should then be available as an font option in Sublime, VS Code, and anywhere else you want a monospaced font.

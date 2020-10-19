@@ -3,7 +3,7 @@ layout: project-post
 title: "Learning Auth With Golang: Introduction"
 slug: intro
 description: "Let's Roll Our Own Auth"
-date: 2020-05-17
+published_date: 2020-05-17
 author: Franco Posa
 order_number: 1
 ---

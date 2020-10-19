@@ -3,7 +3,7 @@ layout: resource-post
 title: "Python Dev Setup for MacOS Part 1: Pyenv + Virtualenvwrapper"
 slug: python-macos-1
 description: "Worry-free Python development environment setup for MacOS"
-date: 2020-01-24
+published_date: 2020-01-24
 author: Franco Posa
 order_number: 5
 ---
