@@ -4,6 +4,7 @@ title: "Golang Dev Setup for MacOS"
 slug: golang-macos
 description: "A beginner's Golang development environment setup for MacOS"
 published_date: 2020-01-24
+udpated_date: 2020-10-18
 author: Franco Posa
 order_number: 2
 ---
@@ -45,12 +46,45 @@ func main() {
     fmt.Print("Hello, World\n")
 }
 ```
-* Run it: `% go run hello.go`
-* Build it (creates an executable in the same directory): `% go build hello.go`
-* Run the binary: `% ./hello`
-* Install the binary so it's available anywhere on your system: `% go install hello`
-* Change directory to  somewhere else: `% cd ~/Downloads`
-* Verify your binary is runnable from everywhere: `% hello`
+
+**Run it**
+```
+% go run hello.go
+```
+
+**Build it**
+
+This creates an executable in the same directory:
+```
+% go build hello.go
+```
+
+**Run the binary**
+```
+% ./hello
+Hello, World
+```
+
+**Install the binary**
+
+This makes the executable available anywhere on your system:
+
+```
+% go install hello
+```
+
+**Change directory to somewhere else**
+
+```
+% cd ~/Downloads
+```
+
+**Verify your binary is runnable from everywhere**
+
+```
+% hello
+Hello, World
+```
 
 ### Troubleshooting
 If you get `zsh: command not found: hello` when trying to run your installed binary, there is likely an issue with your path. The `% go install` command places the binary in `$GOPATH/bin`, so check that `$GOPATH/bin` is in your `PATH` as described in the Installation step.

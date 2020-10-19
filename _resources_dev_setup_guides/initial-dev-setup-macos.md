@@ -9,7 +9,7 @@ author: Franco Posa
 order_number: 1
 ---
 ## The Very Basics
-This guide is meant to walk through the most basic components of a dev environment setup on MacOs Catalina - the steps you would perform before writing your first lines of code on a new or factory-reset machine.
+This guide is meant to walk through the most basic components of a dev environment setup on MacOs (Catalina and newer) - the steps you would perform before writing your first lines of code on a new or factory-reset machine.
 
 For my purposes and preferences, these basic components are:
 
@@ -31,7 +31,7 @@ The following assumes you are using the MacOS built-in Terminal.app
 3. In the General tab, note that "Default login shell" is selected. On MacOS Catalina, the default shell has been updated to `/bin/zsh`. On previous MacOS versions, you can enter `/bin/zsh` in the "Command (complete path)" option to switch from the default (`/bin/bash`) to `zsh`
 4. Use the Profiles tab to set any font, color, and cursor preferences you may have.
 
-### Your first entry into `~/.zshrc`
+### Your first entry into `.zshrc`
 
 Your zsh configuration will largely be managed in `.zshrc` file in your home directory. This file is executed as a shell script whenever you initiate a new zsh session.
 
@@ -66,7 +66,6 @@ You should see the contents of your `PATH` printed out. Compare the output to di
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 % echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-% [carry on doing your thing]
 ```
 
 ## 2. Install Homebrew

@@ -31,7 +31,6 @@ We will avoid automatically running the `post-install` step by installing with t
 
 From the Homebrew man pages:
 
-
 > `--build-bottle`: Prepares the formula for eventual bottling during installation, skipping any post-install steps.
 
 It is not the sole intended purpose of the `--build-bottle` option to skip post-install steps, but it works well enough for our purposes.
