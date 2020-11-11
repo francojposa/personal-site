@@ -42,7 +42,7 @@ Do not brew install python3, do not mess with Python 2 or Python 3 versions that
 ```
 As long as `~/.pyenv/shims` sits at the beginning of your `PATH`, Python versions installed by Pyenv will take precedence over any others.
 
-Add this to your `~/.zshrc` to ensure Pyenv is initialized on each new shell session:
+Add this to your `.zshrc` to ensure Pyenv is initialized on each new shell session:
 ```
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -74,7 +74,7 @@ Python 3.6.8 (default, Jan 21 2020, 21:10:14)
 ```
 
 ### Set your global default Python version
-To make sure you always start a shell session with your preferred default Python version, add this line to your `~/.zshrc`:
+To make sure you always start a shell session with your preferred default Python version, add this line to your `.zshrc`:
 
 ```
 export PYENV_VERSION=3.8.0
@@ -95,7 +95,7 @@ And see the effects on your next shell session:
 ```
 The first time Virtualenvwrapper runs for each Python version, it will need to download a few pip packages.
 
-In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Add the line `pyenv virtualenvwrapper` to your `~/.zshrc`.
+In order to have access to the Virtualenvwrapper commands you will need to run this for each shell session. Add the line `pyenv virtualenvwrapper` to your `.zshrc`.
 
 ## 4. Try it Out
 

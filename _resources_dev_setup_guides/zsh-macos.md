@@ -5,7 +5,7 @@ slug: zsh-configuration-macos
 description: "Configuration for Zsh supporting development in Python, Golang, and Kotlin on MacOS"
 published_date: 2020-07-08
 author: Franco Posa
-order_number: 8
+order_number: 9
 ---
 
 ```shell

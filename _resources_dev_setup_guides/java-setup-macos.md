@@ -21,7 +21,7 @@ With a preference towards FOSS, we are going to use OpenJDK and not Oracle's JDK
 
 #### Make sure Java from the OpenJDK is first in your `PATH`
 
-Add the following to your ~/.zshrc:
+Add the following to your `.zshrc`:
 ```
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 ```

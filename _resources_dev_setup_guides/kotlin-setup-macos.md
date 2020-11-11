@@ -22,7 +22,7 @@ Then follow the prompt to initialize SDKMAN:
 % source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
 
-The initialization step will place the following snippet at the end of your `~/.zshrc`:
+The initialization step will place the following snippet at the end of your `.zshrc`:
 
 ```
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -30,9 +30,9 @@ export SDKMAN_DIR="/Users/franco/.sdkman"
 [[ -s "/Users/franco/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/franco/.sdkman/bin/sdkman-init.sh"
 ```
 
-I prefer to keep `echo $PATH` as the last line of my `~/.zshrc`.
+I prefer to keep `echo $PATH` as the last line of my `.zshrc`.
 
-The SDKMAN initalization snippet seems to work fine even if it is not at the end of `~/.zshrc`. Without taking a closer at the contents of the init script, I assume the point is just to make sure that the JDKs/SDKs installed by SDKMAN remain ahead of all others in the `PATH`.
+The SDKMAN initalization snippet seems to work fine even if it is not at the end of `.zshrc`. Without taking a closer at the contents of the init script, I assume the point is just to make sure that the JDKs/SDKs installed by SDKMAN remain ahead of all others in the `PATH`.
 
 
 ## 2. Install OpenJDK and the Kotlin Runtime with SDKMAN
@@ -71,7 +71,7 @@ Downloading: kotlin 1.3.72
 ...
 ```
 
-#### Confirm your `kotlin` and `kotlinc` commands map to the SDKMAN-installed Kotlin runtime
+#### Confirm your `kotlin` and `kotlinc` commands map to the SDKMAN-installed Kotlin
 
 ```
 % which kotlin    
@@ -104,7 +104,7 @@ When you are in the `New Project` dialogue, you will want to select `Project SDK
 
 Choose the JDK you want to use and continue through the remainder of the steps from the offical Kotlin guide
 
-You will notice from the `-classpath` of your program run that IDEA will use the Kotlin runtime bundled with the offical IntelliJ Kotlin plugin, rather than what you installed with SDKMAN:
+You will notice from the `-classpath` of your program run that IDEA will use the Kotlin bundled with the offical IntelliJ Kotlin plugin, rather than what you installed with SDKMAN:
 
 ```
 /Users/franco/.sdkman/candidates/java/11.0.7.hs-adpt/bin/java \
@@ -113,4 +113,4 @@ You will notice from the `-classpath` of your program run that IDEA will use the
 -classpath /Users/franco/repos/hello-kotlin/out/production/hello-kotlin:/Users/franco/Library/Application Support/JetBrains/IdeaIC2020.1/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Users/franco/Library/Application Support/JetBrains/IdeaIC2020.1/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Users/franco/Library/Application Support/JetBrains/IdeaIC2020.1/plugins/Kotlin/kotlinc/lib/kotlin-test.jar:/Users/franco/Library/Application Support/JetBrains/IdeaIC2020.1/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk7.jar:/Users/franco/Library/Application Support/JetBrains/IdeaIC2020.1/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk8.jar AppKt
 ```
 
-Changing this configuration is probably not worth the hassle. Kotlin is maintained and distributed by IntelliJ, so as long as your SDKMAN version and the IDEA plugin are updated, there should be no meaningful difference between the Kotlin runtime available from your command line and the runtime used by IDEA.
+Changing this configuration is probably not worth the hassle. Kotlin is maintained and distributed by IntelliJ, so as long as your SDKMAN version and the IDEA plugin are updated, there should be no meaningful difference between the Kotlin available from your command line and the Kotlin used by IDEA.

@@ -4,7 +4,7 @@ title: "Golang Dev Setup for MacOS"
 slug: golang-macos
 description: "A beginner's Golang development environment setup for MacOS"
 published_date: 2020-01-24
-udpated_date: 2020-10-18
+updated_date: 2020-10-18
 author: Franco Posa
 order_number: 2
 ---
@@ -13,7 +13,7 @@ order_number: 2
 
 `% brew install go`
 
-Add the following to your `~/.zshrc`:
+Add the following to your `.zshrc`:
 ```
 # This is the default, but prefer explicit over implicit
 export GOPATH=$HOME/go
