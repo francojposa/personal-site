@@ -4,7 +4,7 @@ title: "Golang Templates Part 1: Concepts and Composition with Text Templates"
 slug: golang-templates-1
 description: "Understanding Golang's template nesting and hierarchy with basic text templates"
 published_date: 2020-12-10
-updated_date: 2020-12-12
+updated_date: 2020-12-13
 author: Franco Posa
 order_number: 1
 ---
@@ -26,7 +26,7 @@ We will illustrate these concepts with some basic text examples, modified from t
 
 Part 2 of this guide will extend these basics to more practical HTML examples.
 
-## 1. Declaring and Invoking Templates
+## Declaring and Invoking Templates
 
 ### Using `define` and `template`
 
@@ -104,7 +104,7 @@ executing T3 Template: ONE TWO
 executing full Template collection: ONE TWO
 ```
 
-## 2. Building a Template Collection
+## Building a Template Collection
 
 As mentioned, Go's `Template` is a recursive data type, meaning that each instance is a collection made up of one or more `Template` instances. This structure is represented by the `parse.Tree` type, although in practice it acts as a graph rather than a tree.
 
@@ -150,7 +150,7 @@ Output:
 ; defined templates are: "T2", "T3", "T1", "tmplEx1"  # names are not in any particular order
 ```
 
-## 3. Executing Templates
+## Executing Templates
 
 Template collections can be executed as a whole from the root of the tree with the `Execute` method, or a specific template in the collection can be referenced by name with `ExecuteTemplate`.
 
