@@ -24,6 +24,16 @@ layout: null
   </url>
 {% endfor %}
 
+{% assign ordered_golang_guides = site.resources_golang_guides | sort:"order_number" %}
+  {% for golang_guide in ordered_golang_guides %}
+  <url>
+    <loc>{{ site.url }}{{ golang_guide.url }}</loc>
+    <lastmod>{{ golang_guide.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+{% endfor %}
+
 {% for page in site.pages %}
 <url>
   <loc>{{ site.url }}{{ page.url | remove: "/assets/css/style.css" }}</loc>

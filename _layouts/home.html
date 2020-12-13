@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h2 class="page-title"><a href="/projects">Projects</a></h2>
+<!-- <h2 class="page-title"><a href="/projects">Projects</a></h2>
 <div class="underline"></div>
 
 <h4>Learning Authentication & Authorization With Golang</h4>
@@ -15,7 +15,7 @@ layout: default
         </p>
     </li>
     {% endfor %}
-</ul>
+</ul> -->
 
 <h2 class="page-title">Resources</h2>
 <div class="underline"></div>
@@ -26,6 +26,16 @@ layout: default
     {% for dev_setup_guide in ordered_dev_setup_guides %}
     <li>
         <hp><a href="{{ dev_setup_guide.url }}">{{ dev_setup_guide.title }}</a></p>
+    </li>
+    {% endfor %}
+</ul>
+
+<h4>Golang</h4>
+<ul>
+    {% assign ordered_golang_guides = site.resources_golang_guides | sort:"order_number" %}
+    {% for golang_guide in ordered_golang_guides %}
+    <li>
+        <hp><a href="{{ golang_guide.url }}">{{ golang_guide.title   | remove:"Golang "}}</a></p>
     </li>
     {% endfor %}
 </ul>

@@ -5,6 +5,9 @@ collections:
   resources_dev_setup_guides:
     output: true
     permalink: /resources/dev-setup/:title
+  resources_golang_guides:
+    output: true
+    permalink: /resources/golang/:title
 
 
 kramdown:
